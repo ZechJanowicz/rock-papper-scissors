@@ -36,10 +36,14 @@ h1 {
 }
 
 body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 0;
     height: 100vh;
     display: flex;
     flex-direction: column;
     margin: 0;
+    width: 1fr;
 }
 
 .button-container {
