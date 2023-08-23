@@ -1,6 +1,5 @@
 var playerTally = 0;
 var computerTally = 0;
-var answerRock = "rock"
 
 /*Rock = 1 Scissors = 2 Paper = 3 */
 
@@ -14,10 +13,12 @@ function computerTranslated(){
     if (compSelection = 1) {
         compSelection = "Rock";
     }
-    else if (compSelection = 2)
+    else if (compSelection = 2) {
         compSelection = "Scissors";
-    else if (compSelection = 3)
+    }
+    else if (compSelection = 3) {
         compSelection = "Paper";
+    }
     }
 
     let rockString = () => answerRock = "rock";
@@ -41,7 +42,11 @@ function computerTranslated(){
             console.log("You lose! Computer chose Scissors!");
             ++computerTally;
             }
+            displayMessage();
+            displayScore();
             console.log(`${playerTally} and ${computerTally}`)
+            result();
+            return computerTally + " " + playerTally
         }
     
     function rock() {
@@ -56,8 +61,11 @@ function computerTranslated(){
             console.log("You lose! Computer chose Paper!");
             ++computerTally;
             }
+            displayMessage();
+            displayScore();
             console.log(`${playerTally} and ${computerTally}`)
-
+            result();
+            return computerTally + " " + playerTally
         }
     
     function scissors() {
@@ -74,16 +82,46 @@ function computerTranslated(){
             console.log(`You lose! Computer chose Rock`)
             ++computerTally
             }
+            displayMessage();
+            displayScore();
             console.log(`${playerTally} and ${computerTally}`)
+            result();
+            return computerTally + " " + playerTally
         }
 
-    
 
+function result() {
+    if (playerTally === 5) {
+        alert("Human wins!")
+        playerTally = 0;
+        computerTally = 0;
+    }
+    else if (computerTally === 5) {
+        alert("Computer wins!")
+        playerTally = 0;
+        computerTally = 0;
+    }
+}
 
+function displayMessage() {
+    document.getElementById('msg').innerHTML =  `Human:-${playerTally}  Computer:-${computerTally}`
+    var btn = document.getElementsByTagName('button');
+}
 
-
-
-
+function displayScore() {
+    if (compSelection === 1) {
+        let compChoice = "Rock"
+        document.getElementById('scr').innerHTML = `Computer chose: ${compChoice}`
+    }
+    else if (compSelection === 2) {
+        let compChoice = "Scissors"
+        document.getElementById('scr').innerHTML = `Computer chose: ${compChoice}`
+    }
+    else {
+        let compChoice = "Paper"
+        document.getElementById('scr').innerHTML = `Computer chose: ${compChoice}`
+    }
+}
 
 
 

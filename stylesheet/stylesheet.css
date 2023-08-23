@@ -1,8 +1,28 @@
 #header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    height: 25vh;
+    align-items: center;
+    height: 22vh;
+    width: 100%;
+}
+
+#msg {
+    width: 100%;
+    gap: 50px;
+    font-size: 50px;
+    height: 80px;
+    word-spacing: 80px;
+    margin-left: 70px;
+}
+
+.score-checker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: pink;
+    text-align: center;
 }
 
 h1 {
