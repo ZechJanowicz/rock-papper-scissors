@@ -7,23 +7,29 @@
 </head>
 <body>
 
-    <div id="header">
-        <h1>Rock Paper Scissors!</h1>
-        <h2>Battle!</h2>
+    <div class="game-card">
+        <div id="header">
+            <h1>Rock Paper Scissors!</h1>
+            <h2>Battle!</h2>
+            <h3>First to Five Wins!</h3>
+        </div>
+            <div class="button-container">
+                <button onclick="rock()"><img src="images/stone.png"></button>
+                <button onclick="paper()"><img src="images/paper.png"></button>
+                <button onclick="scissors()"><img src="images/rock-paper-scissors-icon-5.jpg"></button>
+            </div>
+            <div class="score-checker">
+                <p id="scr">
+                </p>
+                <p id="msg">
+                </p>
+            </div>
     </div>
 
-        <div class="button-container">
-            <button onclick="rock()">Rock</button>
-            <button onclick="paper()">Paper</button>
-            <button onclick="scissors()">Scissors</button>
-        </div>
-        <div class="score-checker">
-            <p id="scr">
+    <div class="footer">
+        <p>Created by Zechariah Janowicz</p>
+    </div>
 
-            </p>
-            <p id="msg">
-            </p>
-        </div>
 
 </body>
 <script src="javascript/javascript.js"></script>

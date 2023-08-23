@@ -92,12 +92,13 @@ function computerTranslated(){
 
 function result() {
     if (playerTally === 5) {
-        alert("Human wins!")
         playerTally = 0;
         computerTally = 0;
+        document.getElementById('scr').innerHTML = `Human wins!`
+
     }
     else if (computerTally === 5) {
-        alert("Computer wins!")
+        document.getElementById('scr').innerHTML = `Computer Wins!`
         playerTally = 0;
         computerTally = 0;
     }
@@ -105,7 +106,6 @@ function result() {
 
 function displayMessage() {
     document.getElementById('msg').innerHTML =  `Human:-${playerTally}  Computer:-${computerTally}`
-    var btn = document.getElementsByTagName('button');
 }
 
 function displayScore() {
@@ -122,6 +122,7 @@ function displayScore() {
         document.getElementById('scr').innerHTML = `Computer chose: ${compChoice}`
     }
 }
+
 
 
 
